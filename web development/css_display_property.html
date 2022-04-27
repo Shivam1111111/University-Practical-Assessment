@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+</head>
+<body>
+    <style>
+        h2{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            /* h2 is block so no need to make it block to apply margin auto */
+            margin : 0px;
+            text-align: center;
+        }
+        img{
+            /* To make img at center the we have to make it first block bz it is inline */
+            display: block;
+            margin:auto;
+            height: 80px;
+        }
+        header{
+            /* display: inline; */
+
+            /* margin auto means it leave same amount space from left and right */
+            margin: auto; 
+            border : 2px solid black;
+            /* width : 800px; */
+        }
+        .class_div{
+            border : 2px solid rgb(27, 26, 26);
+            background-color : gray;
+            color:aliceblue; 
+            margin : 6px;
+            padding : 18px;
+            display : inline-block;
+            width : 455px;
+            /* display inline- block is use as float : right or left, but it is batter then it.
+            By this function we can set width of inline element.
+            As we can set width of b;ock element but those element will be block only and if want all element in a same line then we have
+                to use this function 
+            By this function we make block element inline and then able to set the width of those element*/
+            box-sizing: border-box;
+            /* box-sizing property do what : width become constant including margin and padding */
+        }
+        .container{
+            border: 5px solid black;
+            margin : auto;
+            margin-top:10px;
+            /* width : 1410px */
+            /* to make it responsive we should avoid giving hight and width BUT it will be at center till some limit*/
+        }
+
+       
+    </style>
+
+    <!-- when we make an block element inline but if there is a block element in that block element then it will create problem
+        for eg div is block and <p > is also block and when we make div inline then structure will degreade -->
+
+    <!-- header is block element -->
+    <header>
+        <!-- img is inline element -->
+        <img src ="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" alt = "seceary"  /> <!--Pic from google-->
+        <!-- h2 is block element -->
+        <h2>Welcome To My Palace</h2>
+    </header>
+
+
+    <div class ="container">
+
+        <div class = "class_div" id = "div1" >
+            <p id = "p1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Eos perspiciatis, corrupti ipsum incidunt alias aliquid id labore voluptates iure vero nostrum modi aspernatur maiores. Quod hic harum reiciendis blanditiis sint.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Reprehenderit autem eveniet sequi incidunt. Officia atque nostrum, error qui optio ut vitae tempora autem temporibus neque earum officiis architecto cum libero.
+            </p>
+        </div>
+        <div class = "class_div" id = "div2" >
+            <p id = "p2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Eos perspiciatis, corrupti ipsum incidunt alias aliquid id labore voluptates iure vero nostrum modi aspernatur maiores. Quod hic harum reiciendis blanditiis sint.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Reprehenderit autem eveniet sequi incidunt. Officia atque nostrum, error qui optio ut vitae tempora autem temporibus neque earum officiis architecto cum libero.
+            </p>
+        </div>
+        <div class = "class_div" id = "div3" >
+            <p id = "p3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Eos perspiciatis, corrupti ipsum incidunt alias aliquid id labore voluptates iure vero nostrum modi aspernatur maiores. Quod hic harum reiciendis blanditiis sint.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Reprehenderit autem eveniet sequi incidunt. Officia atque nostrum, error qui optio ut vitae tempora autem temporibus neque earum officiis architecto cum libero.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

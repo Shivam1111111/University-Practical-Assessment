@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+  </head>
+  <body>
+    <style>
+
+        body{
+            background-color: aqua;
+            background-image: url(pic.jpg);
+            background-size: 1440px;
+        }
+
+        *{
+            box-sizing: border-box; 
+            margin : 0px;
+            padding : 0px;
+        }
+
+      .div_class {
+        background-color: rgb(147, 235, 240);
+        border: 5px solid black;
+        border-radius: 8px;
+        font-size: 15px;
+
+    /* padding will give extra space surrounding by words, give space from all side of text
+            ( Example 20px given from right left top and bottom) */
+        padding: 10px; 
+
+    /* we can also give padding and marging to specified side  */
+        /* padding-left: 500px; */
+
+    /* we acn also give padding from all side by giving size */
+
+        /* padding : 200px 30px 10px 40px;   ############ top , right , bottom , left ############ */
+
+    /* margin will give space from all side of border outside
+            ( Example 30px given from right left top and bottom) */
+
+    /* we can also giv pagging/margin in group of (top/bottom) and and (right/left) */
+        padding : 25px 10px; /*(top,bottom) X (right,left)*/
+        
+        margin: 30px;
+        margin-right: 400px;
+        width : 600px;
+        
+
+        /* box-sizing: border-box;  */
+
+        /* with the help of this property width or any thing will remail same when we made change in padding and margin*/
+        /* without of this when we made change in pading or increase padding width will increase and text remain same but
+        with this width will remail same while padding increase and text will edjust by increasing or decreasing hight of border box*/
+      }
+    </style>
+
+    <div class="div_class">
+      <h1>Heading 1</h1>
+      <p id="first_p">
+        This is first paragraph. Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Veritatis voluptates ducimus mollitia qui maiores
+        atque sed at rem doloremque. At sit quasi asperiores eos repellat cum
+        ratione mollitia nobis accusantium.
+      </p>
+    </div>
+
+    <div class="div_class">
+      <h1>Heading 2</h1>
+      <p id="sec_p">
+        This is second paragraph. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Perferendis consectetur asperiores quas ipsam, in cum
+        minima fuga distinctio ea, vel nostrum explicabo, laboriosam qui
+        consequatur reiciendis. Fugiat excepturi aliquam ducimus.
+      </p>
+    </div>
+
+    <div class="div_class">
+      <h1>Heading 3</h1>
+      <p id="third_p">
+        This is third paragraph. Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Possimus quis suscipit incidunt modi quisquam
+        voluptates, adipisci temporibus soluta delectus itaque accusantium
+        dolore libero porro rem nemo fugiat minus corporis dolorum?
+      </p>
+    </div>
+
+    <div class="div_class">
+      <h1>Heading 3</h1>
+      <p id="forth_p">
+        This is forth paragraph. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Repudiandae, tenetur maxime! Repellat ducimus optio
+        maiores asperiores tempore quae provident dicta magni iste, modi
+        voluptatum at totam laudantium inventore nihil sunt?
+      </p>
+    </div>
+    <!-- <div id = "div_e"></div> -->
+  </body>
+</html>

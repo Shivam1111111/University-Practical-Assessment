@@ -1,0 +1,45 @@
+
+Syntex of CSS : Selector { property : value}
+    Example : p { color : red; }
+
+There are three types of css implementation methods;
+1. Inline method: in this method we edit tags in the same line by writing css code.
+    Example :   <p style = "color: blue;">
+    Example : <p style = "color: rgb(151, 197, 22); background-color: brown;">
+
+2. Internal method : In this method we write css code in same page with HTML.
+    Example : <style>
+        p{
+            color: purple;
+            background-color: aquamarine;
+        }
+    </style>
+
+3. External method :  In this method we make new file for css code and include that file in HTML code file.
+    Example :  <link rel="stylesheet" href="cssFirst.css">
+            (( href tag open cssFirst.css file from vs code and run the code of that file
+                p{
+                    color : rgb(235, 46, 194);
+                    background-color: darkgreen;
+                }
+            ))
+
+There are four type of selector in css 
+1. element selector (it selector give style to all element, which is mention in tag)
+    Example : p{
+            color: purple;
+            background-color: aquamarine;
+            }
+            this method have element selector which give style to all p paragraph;
+2. id selector (if we want to give style to a particular thing then we should give it to that thing and mention that id in css style tag)
+    Example : 
+3. class selector
+4. grouping selector
+
+
+######### IMP IMP IMP ########## we can not set width of inline element it is only for block element  ######### IMP IMP IMP ##########  
+
+Display Property :
+
+1. display : Block = we can make any inline element block and can set the width.
+1. display : inline = we can make any block element to inline and this thing allow to take only require space.

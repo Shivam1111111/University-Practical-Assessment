@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+<body>
+    <div>
+        <h1> Just Form </h1>
+        <form action="form.php"></form>
+        Name : <input type = "text" name = "Myname">
+        <!-- here we give name tag to above syntex so that in backend it can be easily identify -->
+        <!-- we can also do like : -->
+        <input type = "text" placeholder="Enter name">
+        <!-- we can use div to place things in other line insted of br tag but here i use br -->
+        <br>
+        Roll : <input type = "text" placeholder="enter intiger digit roll number">
+        <br>
+
+        <lable for ="emailid">Email id : </lable>
+        <input type = "email" name = "myemail" id = "emailid">
+
+        <br>
+        <input type = "email" placeholder="write email">
+        <br>
+
+        <lable> Email :
+            <input type = "email" name = "mymail">
+        </lable>
+        <br>
+        <input type = "date" >
+        <br>
+
+        <!-- <label> Gender : -->
+        
+            <input type = "radio" value = "Mail">
+
+        <!-- </label> -->
+        <br>
+        Are you elegible : <input type = "checkbox" name = "elegibality">
+        <br>
+
+
+        Gender : <input type = "radio" name = "section"> Male <input type = radio name = "section"> Female
+        <!-- every thing have different name but for radio buttens the option should have same name to select among them -->
+        <!-- backend will find values of forms with the hel or name : eg : what is the value of form having name elegibality,or
+        gender or myemail -->
+        <br>
+        <br>
+
+
+        <!-- the better way to write radio tag -->
+        <!-- for gives id to tag -->
+        <lable for="maleid">
+            <input type = "radio" name = "gender" id = "maled"> Male
+        </lable>
+        <lable for="femaleid"></lable>
+            <input type = "radio" name = "gender" id = "femaleid"> Female
+        </lable>
+        <br>
+
+        My self : <textare name = "myself" rows = "30" cols = "30"></textare>
+        <br>
+
+
+        <input type = "submit" value = " Submit details">
+        <input type = "reset" value = "Reset form">
+    </div>
+</body>
+</html>
+
+<!-- See lecture 8 of code with harry for betterment -->

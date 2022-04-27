@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+</head>
+<body>
+    <!-- if we want to give style to specific tag then we use id, Here #id mean upade tag with this id -->
+    <style>
+
+        /* element selector */
+        div{
+            border: 5px solid black;
+        }
+        p{
+            border : 2px solid darkred;
+            font-style: italic;
+            font-size : 25px; /* 1 px = 1/96 inch*/
+        }
+
+        /* id selector */
+        #this_only_div{
+            height: 500px;
+            width: 500px;
+            border : 5px solid rgb(161, 9, 9);
+            background-color: darkgoldenrod;
+        }
+
+        #id_of_p1{
+            color : blueviolet;
+            background-color: aquamarine;
+        }
+        #id1_in_div{
+            color:darkgoldenrod;
+        }
+
+        /* class selector */
+        .green_class{
+            color : green;
+        }
+        .red_class{
+            width: 500px;
+            color : greenyellow;
+            background-color : violet; 
+        }
+        /* here we can also style elements in group */
+        /* group  selector */
+        .group_color,span,footer{
+            background-color: lightpink;
+        }
+
+
+    </style>
+
+<!-- ###################################  IMP ###### IMP ###### IMP ###### IMP ###### IMP ##################################-->
+
+<!-- When we have to style only one element the we will give id to that tag and give style /// Example : Logo of any website  -->
+<!-- If we want to give style to many elements the we will give all that element common class and give style /// Example : text and all -->
+
+    <p class = "yellow">
+        This is the outer paragrap.
+        sfsgd gchud fss kvgsx udgd du djkimc
+    </p>
+
+    <p id = "id_of_p1", class = "red_class">
+        hsfst gs hxfsn hsksm  vxxjsis hxu shiva, is good boy and is xjshxjsh
+    </p>
+
+    <div class = "red_class">
+        <p id = "id1_in_div">
+            This paragraph is in Div tag.
+        </p>
+
+        <p class = "green_class">
+            My name is shivam and i am patel.
+        </p>
+    </div>
+
+    <div id = "this_only_div"></div>
+
+    <p class = "group_color"> This is p tag with span and footer</p>
+    <div class = "group_color"> This is div tag with span and footer</div>
+    <span>xyvujjjj hdjjs jjjs</span>
+    <footer>This website is copyright.....</footer>
+</body>
+</html>

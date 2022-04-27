@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float & clear</title>
+</head>
+<!-- <link href="https://fonts.google.com/specimen/Indie+Flower" rel="stylesheet"> -->
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    #container{
+        border : 4px solid black;
+        background-color: rgb(4, 70, 4);
+        /* width : 700px; */
+        padding : 20px;
+        margin : auto;
+        box-sizing: border-box;
+        /* overflow: hidden; */
+    }
+    .item{
+        border : 2px solid black;
+        padding : 7px;
+        margin : 20px auto; /* ( #### uper and (right,left) ####)
+        /* auto / center use for placing blocks in center (right and left )*/
+        background-color: rgb(173, 238, 238);
+    }
+    /* int the list if i want to place at least ont block to left then i use float */
+    /* ####### Example ######## */
+    #computer{
+        float: right;
+        width : 300px;
+        margin : 1px;
+        /* clear : left; */
+        /* overflow: hidden; */
+    }
+    
+    #grocery{
+        clear : both;
+        margin-top: 20px;
+    }
+    #extra{
+        border : 2px solid black;
+        background-image: url(pic.jpg);
+        background-size: 400px;
+        width : 330px;
+        height : 220px;
+        margin : 10px;
+        float : left;
+    }
+    /* for text alignment */
+    p{
+        /* text-align : right;
+        /* text-align : left; */
+        /* text-align : center; */ 
+        text-align: justify; /* This justify tag complit whole line with word and then only go below*/
+
+    }
+    h2{
+        text-align: center;
+    }
+    h1{
+        color: aliceblue;
+        font-family: monospace;
+        font-weight: 700;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <h1>Welcome</h1>
+        <div id = "fruits" class="item">
+            <h2>Fruits</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor asperiores eaque dolores quia aperiam! Quisquam quae autem iure incidunt. Consequuntur, possimus necessitatibus. Dignissimos quasi recusandae eveniet, nemo voluptatum perspiciatis fugit.
+            </p>
+        </div>
+
+        <div id = "computer" class="item">
+            <h2>Computer</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor asperiores eaque dolores quia aperiam! Quisquam quae autem iure incidunt. Consequuntur, possimus necessitatibus. Dignissimos quasi recusandae eveniet, nemo voluptatum perspiciatis fugit.
+            </p>
+        </div>
+
+        <div id = "extra"></div>
+
+        <div id = "grocery" class="item">
+            <h2>Grocery</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor asperiores eaque dolores quia aperiam! Quisquam quae autem iure incidunt. Consequuntur, possimus necessitatibus. Dignissimos quasi recusandae eveniet, nemo voluptatum perspiciatis fugit.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

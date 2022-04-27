@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psudo selector and more designing</title>
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box; 
+        }
+        .container{
+            border : 3px solid black;
+            background-color : aquamarine;
+            color : darkgreen;
+            width : 600px;
+            /* height: 200px; */  /*we can define width or hight not both because of boxSizing*/
+            padding: 20px;
+            margin:30px auto;
+        }
+        .btn{
+            background-color: rgb(147, 128, 235);
+            /* border: none; */
+            cursor: pointer;
+            border-radius: 2px;
+            font-size: 25px;
+            padding : 5px;
+        }
+        a:hover{
+            color:chartreuse;
+            background-color: rgb(108, 65, 179);
+            border : 2px solid black;
+
+        }
+        #bt_id:hover{
+            color:chartreuse;
+            background-color: rgb(108, 65, 179);
+            /* border : 2px solid black; */
+        }
+        a:visited{
+            /* color:aliceblue; */
+        }
+        a:active{
+            /* learn in detail other */
+        }
+    </style>
+
+    <div class = "container"  id = "id_class">
+        <h1>Buttons theory</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, perspiciatis possimus repellat sapiente impedit laudantium eum, voluptatem, quas nam minus dolore iure doloremque autem exercitationem. Rerum molestiae architecto quo voluptatum.</p>
+        <a href = "https://google.com" class = "btn" > Read More</a>
+        <button class = "btn" id ="bt_id"> Contact Us</button>
+    </div>
+</body>
+</html>

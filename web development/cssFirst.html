@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css First</title>
+</head>
+<body>
+    <!-- ####### when there is an inline method is used on any tag we want to edit same tag with internal then it is not possible ######## -->
+    <!-- this is internal method -->
+    <style>
+        p{
+            color: purple;
+            background-color: aquamarine !important;
+            /* ########### adding !important give more priority and become unchangable for external method and inline method
+            this will work for external method also*/
+        }
+        </style>
+    <!-- This is external method -->
+    <!-- ###### Here the internal or external both have same priority, difference is only where we write up or down because both things are same -->
+    <link rel="stylesheet" href="cssFirst.css">
+
+    <h1 style = "color: rgb(20, 114, 40);">CSS first prc codes</h1>
+    <div>
+
+        <p>
+            My name is shivam patel and i am a good boy
+        </p>
+
+        <p style="background-color: rgb(104, 173, 219);">
+            My father's name is Mukeshbhai.
+        </p>
+    </div>
+
+        <!-- this is called inline method -->
+        <!-- <p style = "color: rgb(151, 197, 22); background-color: brown;">
+            My name is shivam And i am a good boy.
+        </p> -->
+</body>
+</html>

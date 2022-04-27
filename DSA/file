@@ -1,0 +1,274 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int arr[] = { 1, 5, 8, 9, 6, 7, 3, 4, 2, 0 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+ 
+    /*Here we take two parameters, the beginning of the
+    array and the length n upto which we want the array to
+    be sorted*/
+    sort(arr, arr + n);
+ 
+    cout << "\nArray after sorting using "
+            "default sort is : \n";
+    for (int i = 0; i < n; ++i)
+        cout << arr[i] << " ";
+ 
+    return 0;
+}
+Output : 
+
+Array after sorting using default sort is : 
+0 1 2 3 4 5 6 7 8 9 
+How to sort in descending order? 
+sort() takes a third parameter that is used to specify the order in which elements are to be sorted. We can pass the “greater()” function to sort in descending order. This function does a comparison in a way that puts greater elements before. 
+
+CPP
+// C++ program to demonstrate descending order sort using
+// greater<>().
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int arr[] = { 1, 5, 8, 9, 6, 7, 3, 4, 2, 0 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+ 
+    sort(arr, arr + n, greater<int>());
+ 
+    cout << "Array after sorting : \n";
+    for (int i = 0; i < n; ++i)
+        cout << arr[i] << " ";
+ 
+    return 0;
+}
+Output:
+
+Array after sorting : 
+9 8 7 6 5 4 3 2 1 0 
+How to sort in a particular order? 
+We can also write our own comparator function and pass it as a third parameter. This “comparator” function returns a value; convertible to bool, which basically tells us whether the passed “first” argument should be placed before the passed “second” argument or not. 
+For eg: In the code below, suppose intervals {6,8} and {1,9} are passed as arguments in the “compareInterval” function(comparator function). Now as i1.first (=6) < i2.first (=1), so our function returns “false”, which tells us that “first” argument should not be placed before “second” argument and so sorting will be done in order like {1,9} first and then {6,8} as next. 
+
+CPP
+// A C++ program to demonstrate
+// STL sort() using
+// our own comparator
+#include <bits/stdc++.h>
+using namespace std;
+ 
+// An interval has a start
+// time and end time
+struct Interval {
+    int start, end;
+};
+ 
+// Compares two intervals
+// according to starting times.
+bool compareInterval(Interval i1, Interval i2)
+{
+    return (i1.start < i2.start);
+}
+ 
+int main()
+{
+    Interval arr[]
+        = { { 6, 8 }, { 1, 9 }, { 2, 4 }, { 4, 7 } };
+    int n = sizeof(arr) / sizeof(arr[0]);
+ 
+    // sort the intervals in increasing order of
+    // start time
+    sort(arr, arr + n, compareInterval);
+ 
+    cout << "Intervals sorted by start time : \n";
+    for (int i = 0; i < n; i++)
+        cout << "[" << arr[i].start << "," << arr[i].end
+             << "] ";
+ 
+    return 0;
+}
+Output: 
+
+Intervals sorted by start time : 
+[1,9] [2,4] [4,7] [6,8] 
+The time complexity of std::sort() is:
+1. Best Case – O(N log N)
+2. Average Case – O(N log N)
+3. Worst Case – O(N log N)
+
+Space Complexity – It may use O( log N) auxiliary space.
+
+
+
+?list=PLqM7alHXFySGg6GSRmE2INI4k8fPH5qVB 
+ 
+
+This article is contributed by Shubham Agrawal. Please write comments if you find anything incorrect, or you want to share more information about the topic discussed above 
+
+
+
+
+Like
+375
+Previous
+Comparator function of qsort() in C
+Next
+What are the default values of static variables in C?
+RECOMMENDED ARTICLES
+Page :
+1
+2
+3
+fill() and fill_n() functions in C++ STL
+31, Mar 16
+std::transform() in C++ STL (Perform an operation on all elements)
+23, Apr 16
+Count number of unique Triangles using STL | Set 1 (Using set)
+23, May 16
+Permutations of a given string using STL
+28, May 16
+Algorithm Library | C++ Magicians STL Algorithm
+20, Jun 16
+Array algorithms in C++ STL (all_of, any_of, none_of, copy_n and iota)
+08, Jul 16
+Iterators in C++ STL
+14, Jul 16
+Heap in C++ STL | make_heap(), push_heap(), pop_heap(), sort_heap(), is_heap, is_heap_until()
+21, Jul 16
+Counts of distinct consecutive sub-string of length two using C++ STL
+16, Nov 16
+Graph implementation using STL for competitive programming | Set 1 (DFS of Unweighted and Undirected)
+19, Jan 17
+How to insert elements in C++ STL List ?
+07, Apr 17
+Delete elements in C++ STL list
+18, Apr 17
+Binary Search functions in C++ STL (binary_search, lower_bound and upper_bound)
+23, Apr 17
+Vector in C++ STL
+07, Dec 15
+Modifiers for Vector in C++ STL
+07, Dec 15
+Stack in C++ STL
+07, Dec 15
+Sort in C++ Standard Template Library (STL)
+07, Dec 15
+Binary Search in C++ Standard Template Library (STL)
+07, Dec 15
+Counting Inversions using Set in C++ STL
+17, Dec 15
+How to implement Min Heap using STL?
+20, Mar 16
+Insertion and Deletion in STL Set C++
+07, May 17
+Print prime numbers in a given range using C++ STL
+20, May 17
+std::minmax() and std::minmax_element() in C++ STL
+15, Jun 17
+Different methods to copy in C++ STL | std::copy(), copy_n(), copy_if(), copy_backward()
+16, Jun 17
+Article Contributed By :
+https://media.geeksforgeeks.org/auth/avatar.png
+GeeksforGeeks
+Vote for difficulty
+Current difficulty : Easy
+Easy
+Normal
+Medium
+Hard
+Expert
+Improved By :
+rahuku
+AbhishekSharma5
+praddyumn
+ankitsinghrajput
+varshagumber28
+tanmaynikam2002
+Article Tags :
+cpp-algorithm-library
+CPP-Library
+STL
+C Language
+C++
+Sorting
+Practice Tags :
+Sorting
+STL
+CPP
+Improve Article
+Report Issue
+Writing code in comment? Please use ide.geeksforgeeks.org, generate link and share the link here.
+
+Load Comments
+WHAT'S NEW
+
+C++ STL - Self Paced Course
+View Details
+
+Complete Interview Preparation
+View Details
+
+System Design-Live Classes for Working Professionals
+View Details
+MOST POPULAR IN C LANGUAGE
+fork() in C
+Command line arguments in C/C++
+Left Shift and Right Shift Operators in C/C++
+rand() and srand() in C/C++
+Substring in C++
+MOST VISITED IN C++
+Initialize a vector in C++ (6 different ways)
+Map in C++ Standard Template Library (STL)
+C++ Classes and Objects
+Inheritance in C++
+Constructors in C++
+
+5th Floor, A-118,
+Sector-136, Noida, Uttar Pradesh - 201305
+feedback@geeksforgeeks.org
+Company
+About Us
+Careers
+Privacy Policy
+Contact Us
+Copyright Policy
+Learn
+Algorithms
+Data Structures
+Machine learning
+CS Subjects
+Video Tutorials
+News
+Technology
+Work & Career
+Business
+Finance
+Lifestyle
+Languages
+Python
+Java
+CPP
+Golang
+C#
+Web Development
+Web Tutorials
+HTML
+CSS
+JavaScript
+Bootstrap
+Contribute
+Write an Article
+Pick Topics to Write
+Write Interview Experience
+Internships
+Video Internship
+@geeksforgeeks , Some rights reserved
+
+We use cookies to ensure you have the best browsing experience on our website. By using our site, you acknowledge that you have read and understood our Cookie Policy & Privacy Policy
+Got It !
+Lightbox
+Start Your Coding Journey Now!
+Login
+Register
